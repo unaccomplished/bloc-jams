@@ -30,6 +30,21 @@ var albumMarconi = {
   ]
 };
 
+var albumBeatles = {
+  title: 'Abbey Road',
+  artist: 'The Beatles',
+  label: 'Apple',
+  year: '1969',
+  albumArtUrl: 'assets/images/album_covers/11.png',
+  songs: [
+    { title: 'Come Together', duration: '3:20' },
+    { title: 'Something', duration: '2:45' },
+    { title: "Maxwell's Silver Hammer", duration: '4:11' },
+    { title: 'Oh! Darling', duration: '1:57' },
+    { title: "Octopus's Garden", duration: '3:06' }
+  ]
+}
+
 var createSongRow = function(songNumber, songName, songLength) {
   var template =
     '<tr class="album-view-song-item">'
@@ -63,4 +78,14 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
   setCurrentAlbum(albumPicasso);
+
+  albumImage.addEventListener('click', function(album) {
+    if (album === albumBeatles) {
+      setCurrentAlbum(albumPicasso);
+    } else if (album === albumPicasso) {
+      setCurrentAlbum(albumMarconi);
+    } else if (album === albumMarconi) {
+      setCurrentAlbum(albumBeatles);
+    }
+  });
 };
