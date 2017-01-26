@@ -1,5 +1,5 @@
 var setSong = function(songNumber) {
-  currentlyPlayingSongNumber = songNumber;
+  currentlyPlayingSongNumber = parseInt(songNumber);
   currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
 };
 
