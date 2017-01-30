@@ -15,7 +15,7 @@ var setSong = function(songNumber) {
 
 var setVolume = function(volume) {
   if (currentSoundFile) {
-    currentsoundFile.setVolume(volume);
+    currentSoundFile.setVolume(volume);
   }
 };
 
